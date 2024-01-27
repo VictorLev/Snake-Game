@@ -27,7 +27,7 @@ class Snake
   end
 
   def add
-    @length.unshift({ :x => @pos[:x], :y => @pos[:y] })
+    @length.push(@length[-1])
   end
 
   def change_dir(dir_x, dir_y)

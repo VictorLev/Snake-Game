@@ -1,6 +1,6 @@
 require 'gosu'
-require_relative 'snake'
-require_relative 'food'
+require_relative 'class/snake'
+require_relative 'class/food'
 require 'pry-byebug'
 
 SIZE = 20
@@ -22,8 +22,8 @@ class Game < Gosu::Window
 
   def initialize_sound
     @font = Gosu::Font.new(20)
-    @eat_sound = Gosu::Sample.new("eat.wav")
-    @lost_sound = Gosu::Sample.new("lost.wav")
+    @eat_sound = Gosu::Sample.new("media/eat.wav")
+    @lost_sound = Gosu::Sample.new("media/lost.wav")
   end
 
   def update
